@@ -663,14 +663,14 @@ class TreeViewState<Data, Tree extends ITreeNode<Data>>
 
   @override
   void insertItem(int index, {Duration duration = animationDuration}) {
-    if (_listKey.currentState == null) throw Exception(_errorMsg);
+    if (_listKey.currentState == null) return;
     _listKey.currentState!.insertItem(index, duration: duration);
   }
 
   @override
   void removeItem(int index, Tree item,
       {Duration duration = animationDuration}) {
-    if (_listKey.currentState == null) throw Exception(_errorMsg);
+    if (_listKey.currentState == null) return;
     _listKey.currentState!.removeItem(
       index,
       (context, animation) =>
@@ -990,14 +990,14 @@ class SliverTreeViewState<Data, Tree extends ITreeNode<Data>>
 
   @override
   void insertItem(int index, {Duration duration = animationDuration}) {
-    if (_listKey.currentState == null) throw Exception(_errorMsg);
+    if (_listKey.currentState == null) return;
     _listKey.currentState!.insertItem(index, duration: duration);
   }
 
   @override
   void removeItem(int index, Tree item,
       {Duration duration = animationDuration}) {
-    if (_listKey.currentState == null) throw Exception(_errorMsg);
+    if (_listKey.currentState == null) return;
     _listKey.currentState!.removeItem(
       index,
       (context, animation) =>
